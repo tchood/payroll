@@ -182,19 +182,14 @@ class TaxCalculator
 end
 
 
-			
+# tom = Employee.new('Hood', 'Thomas Christian', Time.local(1984,1,6))
+# fran = Employee.new('Milsom', 'Frances Harriet', Time.local(1983,1,23))
 
+# tom.cum_pay, tom.cum_tax_paid, tom.cum_tax_liability = 0, 1000, 1000
 
+# week, month = [], []
+# (1..12).each {|p| month[p] = TaxPeriod.new("2015",p,12)}
+# (1..52).each {|w| week[w] = TaxPeriod.new("2015",w,52)}
 
-
-tom = Employee.new('Hood', 'Thomas Christian', Time.local(1984,1,6))
-fran = Employee.new('Milsom', 'Frances Harriet', Time.local(1983,1,23))
-
-tom.cum_pay, tom.cum_tax_paid, tom.cum_tax_liability = 0, 1000, 1000
-
-week, month = [], []
-(1..12).each {|p| month[p] = TaxPeriod.new("2015",p,12)}
-(1..52).each {|w| week[w] = TaxPeriod.new("2015",w,52)}
-
-taxcalc = TaxCalculator.new(month[1], tom, 500, 45, "0T", :cum)
-print taxcalc.tax_deduction_this
+# taxcalc = TaxCalculator.new(month[1], tom, 500, 45, "0T", :cum)
+# print taxcalc.tax_deduction_this

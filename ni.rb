@@ -10,7 +10,7 @@ class Round  #duplicated from test.rb - remove
 	end
 end
 
-class NICalculation
+class NICalculator
 	attr_reader :year_ending, :category_letter, :annual_periods, :pay_frequency, :pro_rata_thresholds
 	
 	def initialize (args)
@@ -326,7 +326,7 @@ class NITester
 		tests = 0
 		@ni_test_data.each do |params|
 			tests += 1
-			ni_calc = NICalculation.new(year_ending: '2017', annual_periods: params[0], pay_frequency: params[1], category_letter: params[2])
+			ni_calc = NICalculator.new(year_ending: '2017', annual_periods: params[0], pay_frequency: params[1], category_letter: params[2])
 			unless ni_calc.ees_ni_payable(params[3]) == params[4]
 				puts "Failed test on #{params.to_s} with ees calc value of #{ni_calc.ees_ni_payable(params[3])}"
 			end
